@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"strconv"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	"github.com/hyperledger/fabric/core/crypto/primitives"
@@ -247,7 +246,7 @@ func (t *CandidateInfoStore) Query(stub shim.ChaincodeStubInterface, function st
 		t := CandidateInfoStore{}
 		return t.getCandidate(stub, args)
 	}else if function == "getAllCandidate"{
-        t := getAllCandidate{}
+        t := CandidateInfoStore{}
 		return t.getAllCandidate(stub, args)  
     } 
 	
